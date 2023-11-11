@@ -1,0 +1,264 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Item 1",
+      "price": 12.99,
+      "description": "Description 1",
+      "category": "Category 1",
+      "image": "",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      },
+      "date": "2023-11-05T21:07:00.734Z"
+    },
+    {
+      "id": 2,
+      "title": "Item 2",
+      "price": 7.95,
+      "description": "Description 2",
+      "category": "Category 2",
+      "image": "",
+      "rating": {
+        "rate": 4.5,
+        "count": 146
+      },
+      "date": "2023-11-05T21:07:02.498Z"
+    },
+    {
+      "id": 3,
+      "title": "Item 3",
+      "price": 9.85,
+      "description": "Description 3",
+      "category": "Category 3",
+      "image": "",
+      "rating": {
+        "rate": 4.7,
+        "count": 147
+      },
+      "date": "2023-11-05T21:07:05.141Z"
+    },
+    {
+      "id": 4,
+      "title": "Item 4",
+      "price": 12.99,
+      "description": "Description 4",
+      "category": "Category 4",
+      "image": "",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      },
+      "date": "2023-11-05T21:07:00.734Z"
+    },
+    {
+      "id": 5,
+      "title": "Item 5",
+      "price": 7.95,
+      "description": "Description 5",
+      "category": "Category 5",
+      "image": "",
+      "rating": {
+        "rate": 4.5,
+        "count": 146
+      },
+      "date": "2023-11-05T21:07:02.498Z"
+    },
+    {
+      "id": 6,
+      "title": "Item 6",
+      "price": 9.85,
+      "description": "Description 6",
+      "category": "Category 6",
+      "image": "",
+      "rating": {
+        "rate": 4.7,
+        "count": 147
+      },
+      "date": "2023-11-05T21:07:05.141Z"
+    },
+    {
+      "id": 7,
+      "title": "Item 7",
+      "price": 12.99,
+      "description": "Description 7",
+      "category": "Category 7",
+      "image": "",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      },
+      "date": "2023-11-05T21:07:00.734Z"
+    },
+    {
+      "id": 8,
+      "title": "Item 8",
+      "price": 7.95,
+      "description": "Description 8",
+      "category": "Category 8",
+      "image": "",
+      "rating": {
+        "rate": 4.5,
+        "count": 146
+      },
+      "date": "2023-11-05T21:07:02.498Z"
+    },
+    {
+      "id": 9,
+      "title": "Item 9",
+      "price": 9.85,
+      "description": "Description 9",
+      "category": "Category 9",
+      "image": "",
+      "rating": {
+        "rate": 4.7,
+        "count": 147
+      },
+      "date": "2023-11-05T21:07:05.141Z"
+    },
+    {
+      "id": 10,
+      "title": "Item 10",
+      "price": 12.99,
+      "description": "Description 10",
+      "category": "Category 10",
+      "image": "",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      },
+      "date": "2023-11-05T21:07:00.734Z"
+    },
+    {
+      "id": 11,
+      "title": "Item 11",
+      "price": 7.95,
+      "description": "Description 11",
+      "category": "Category 11",
+      "image": "",
+      "rating": {
+        "rate": 4.5,
+        "count": 146
+      },
+      "date": "2023-11-05T21:07:02.498Z"
+    },
+    {
+      "id": 12,
+      "title": "Item 12",
+      "price": 9.85,
+      "description": "Description 12",
+      "category": "Category 12",
+      "image": "",
+      "rating": {
+        "rate": 4.7,
+        "count": 147
+      },
+      "date": "2023-11-05T21:07:05.141Z"
+    },
+    {
+      "id": 13,
+      "title": "Item 13",
+      "price": 12.99,
+      "description": "Description 13",
+      "category": "Category 13",
+      "image": "",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      },
+      "date": "2023-11-05T21:07:00.734Z"
+    },
+    {
+      "id": 14,
+      "title": "Item 14",
+      "price": 7.95,
+      "description": "Description 14",
+      "category": "Category 14",
+      "image": "",
+      "rating": {
+        "rate": 4.5,
+        "count": 146
+      },
+      "date": "2023-11-05T21:07:02.498Z"
+    },
+    {
+      "id": 15,
+      "title": "Item 15",
+      "price": 9.85,
+      "description": "Description 15",
+      "category": "Category 15",
+      "image": "",
+      "rating": {
+        "rate": 4.7,
+        "count": 147
+      },
+      "date": "2023-11-05T21:07:05.141Z"
+    },
+    {
+      "id": 16,
+      "title": "Item 16",
+      "price": 12.99,
+      "description": "Description 16",
+      "category": "Category 16",
+      "image": "",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      },
+      "date": "2023-11-05T21:07:00.734Z"
+    },
+    {
+      "id": 17,
+      "title": "Item 17",
+      "price": 7.95,
+      "description": "Description 17",
+      "category": "Category 17",
+      "image": "",
+      "rating": {
+        "rate": 4.5,
+        "count": 146
+      },
+      "date": "2023-11-05T21:07:02.498Z"
+    },
+    {
+      "id": 18,
+      "title": "Item 18",
+      "price": 9.85,
+      "description": "Description 18",
+      "category": "Category 18",
+      "image": "",
+      "rating": {
+        "rate": 4.7,
+        "count": 147
+      },
+      "date": "2023-11-05T21:07:05.141Z"
+    },
+    {
+      "id": 19,
+      "title": "Item 19",
+      "price": 7.95,
+      "description": "Description 19",
+      "category": "Category 19",
+      "image": "",
+      "rating": {
+        "rate": 4.5,
+        "count": 146
+      },
+      "date": "2023-11-05T21:07:02.498Z"
+    },
+    {
+      "id": 20,
+      "title": "Item 20",
+      "price": 9.85,
+      "description": "Description 20",
+      "category": "Category 20",
+      "image": "",
+      "rating": {
+        "rate": 4.7,
+        "count": 147
+      },
+      "date": "2023-11-05T21:07:05.141Z"
+    }
+  ]
+}
