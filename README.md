@@ -1,6 +1,7 @@
-<h1 align="center"># CRUD PROJECT</h1>
+<h1 align="center">CRUD PROJECT</h1>
 <p align="center">Create - Read - Update - Delete</p>
 <h2> A. Setup </h2>
+
 ### Create project
 ```
     ng new CRUD
