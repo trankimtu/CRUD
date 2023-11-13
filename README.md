@@ -68,12 +68,12 @@ Ex:
     http://localhost:3000/products
 ```
 <h3> 2. Create "product" component</h3>
+
 ```
     ng g c product
 ```
 After this command the list files below is generated inside product folder.
 <ul>
-    <li>db.json</li>
     <li>product.component.css</li>
     <li>product.component.html</li>
     <li>product.component.spec.ts</li>
@@ -90,6 +90,7 @@ Note: Until now, product folder contain:
 </ul>
 
 <h3> 3. Create "product" service inside product folder</h3>
+
 ```
     ng g s product/product
 ```
@@ -113,6 +114,7 @@ Note: Until now, product folder contain:
 
 <h3> 4. Create "product" interface inside product folder</h3>
 This interface will store database structor
+
 ```
     ng g i product/product
 ```
@@ -121,7 +123,7 @@ After this command the list files below is generated inside product folder.
     <li>product.ts</li>
 </ul>
 
-### Note: Until now, product folder contain:
+Note: Until now, product folder contain:
 <ul>
     <li>db.json</li>
     <li>product.component.css</li>
@@ -135,6 +137,7 @@ After this command the list files below is generated inside product folder.
 </ul>
 
 <h3> 5. Load product component to app component</h3>
+
 ### 5.1 Export ProductComponent
 File: product.module.ts
 ```
