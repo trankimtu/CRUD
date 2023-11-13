@@ -42,7 +42,7 @@ If JSON Server is not installed
     npm install -g json-server
 ```
 
-Create db.json file (This step will do at B.1.)<br>
+Create db.json file (This file will create at 2. after creating "product" module)<br>
 Run watch db
 ```
     json-server <path/db-filename> --watch
