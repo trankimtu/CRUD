@@ -1,32 +1,130 @@
 # CRUD
 Create - Read - Update - Delete
+## Setup
+### Create project
+```
+    ng new CRUD
+```
+### Install PrimeNG, PrimeFlex, PrimeIcons
+```
+    npm i primeng primeflex primeicons --save
+```
+Check package.json
+```
+    "primeflex": "^3.3.1",
+    "primeicons": "^6.0.1",
+    "primeng": "^16.7.1",
+```
+angular.json
+```
+  "styles": [
+    "src/styles.css",
+    "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+    "node_modules/primeng/resources/primeng.min.css",
+    "node_modules/primeflex/primeflex.css",
+    "node_modules/primeicons/primeicons.css"
+  ],
+```
+### JSON-Server
+Create Database JSON file at any location
+Run watch that database
+Result Ex:
+
+    Resources
+        http://localhost:3000/products
+```
+    json-server <path/db-filename> --watch
+```
+
+product.service.ts will use this url
+
+If JSON Server is not installed
+```
+    npm install -g json-server
+```
 
 ## 1. Create "product" module
 ```
     ng g m product
 ```
-This will create ```product``` folder with ```product.module.ts``` inside
+This will create ```product``` folder with ```product.module.ts``` inside<br>
+File db.json can be anywhere, in this project, I place it inside product folder
 ## 2. Create "product" component
 ```
     ng g c product
 ```
+After this command the list files below is generated inside product folder.
+<ul>
+    <li>db.json</li>
+    <li>product.component.css</li>
+    <li>product.component.html</li>
+    <li>product.component.spec.ts</li>
+    <li>product.component.ts</li>
+</ul>
+Note: Until now, product folder contain:
+<ul>
+    <li>db.json</li>
+    <li>product.component.css</li>
+    <li>product.component.html</li>
+    <li>product.component.spec.ts</li>
+    <li>product.component.ts</li>
+    <li>product.module.ts</li>
+</ul>
+
 ## 3. Create "product" service inside product folder
 ```
     ng g s product/product
 ```
+After this command the list files below is generated inside product folder.
+<ul>
+    <li>product.service.spec.ts</li>
+    <li>product.service.ts</li>
+</ul>
+Note: Until now, product folder contain:
+<ul>
+    <li>db.json</li>
+    <li>product.component.css</li>
+    <li>product.component.html</li>
+    <li>product.component.spec.ts</li>
+    <li>product.component.ts</li>
+    <li>product.module.ts</li>
+    <li>product.service.spec.ts</li>
+    <li>product.service.ts</li>
+</ul>
+
+
 ## 4. Create "product" interface inside product folder
+This interface will store database structor
 ```
     ng g i product/product
 ```
+After this command the list files below is generated inside product folder.
+<ul>
+    <li>product.ts</li>
+</ul>
+
+### Note: Until now, product folder contain:
+<ul>
+    <li>db.json</li>
+    <li>product.component.css</li>
+    <li>product.component.html</li>
+    <li>product.component.spec.ts</li>
+    <li>product.component.ts</li>
+    <li>product.module.ts</li>
+    <li>product.service.spec.ts</li>
+    <li>product.service.ts</li>
+    <li>product.ts</li>
+</ul>
+
 ## 5. Load product component to app component
-### Export ProductComponent<br>
+### 5.1 Export ProductComponent
 File: product.module.ts
 ```
     exports: [
         ProductComponent
     ]
 ```
-### Import ProductModule
+### 5.2 Import ProductModule
 File: app.module.ts
 ```
     import { ProductModule } from './product/product.module';
@@ -34,13 +132,90 @@ File: app.module.ts
         ProductModule
     ]
 ```
-### Load product component template to app.component.html
-File: app.component.html
+### 5.3 Load product component template to app.component.html
+File: app.component.html load selector in product.component.ts
 ```
     <app-product></app-product>
 ```
-## 6. Create API with HTTP protocol
-### Setup HTTP service
+
+### Note: After this step, the files would be:
+File: product.module.ts
+```
+    // Angular Import
+    import { NgModule } from '@angular/core'; // 1- Generate when creating product module
+    import { CommonModule } from '@angular/common'; // 1- Generate when creating product module
+
+    // Component Import
+    import { ProductComponent } from './product.component'; // 2- Generate at creating product component
+
+    @NgModule({
+    declarations: [
+        ProductComponent // 2- Generate at creating product component
+    ],
+    imports: [
+        CommonModule, // 1- Generate when creating product module
+    ],
+
+    // 5.1 - Load product component to app component (5.2 in app.module.ts, 5.3 in app.component.html)
+    exports: [ 
+        ProductComponent
+    ]
+    })
+    export class ProductModule { }
+```
+
+File: app.module.ts
+```
+    import { NgModule } from '@angular/core';
+    import { BrowserModule } from '@angular/platform-browser';
+
+    import { AppComponent } from './app.component';
+
+    //5.2 - Load product component to app component (5.1 in product.modules.ts)
+    import { ProductModule } from './product/product.module';
+
+    @NgModule({
+    declarations: [
+        AppComponent
+    ],
+    imports: [
+        BrowserModule,
+        ProductModule  //5.2 - Load product component to app component (5.1 in product.modules.ts, 5.3 in app.component.html)
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
+    })
+    export class AppModule { }
+
+```
+
+File: app.component.html
+```
+    <app-product></app-product> <!-- 5.3 - Load product component to app component (5.1 in product.module.ts, 5.2 in app.module.ts) -->
+```
+
+
+## 6. Handle HTTP protocol
+<ul>
+    <li>Create the API</li>
+    <li>Call the API and make it responds in the back-end</li>
+</ul>
+Another words:
+<ul>
+    <li>Connect to database</li>
+    <li>Query data and store in a parameter to use later</li>
+</ul>
+JSON-Server is used as back-end database <br>
+
+
+###  6.1 Import HttpClientModule
+File: product.module.ts
+```
+    import { HttpClientModule } from '@angular/common/http';
+    imports: [
+        HttpClientModule
+    ],
+```
 File: product.module.ts
 ```
     import { HttpClientModule } from '@angular/common/http';
@@ -57,7 +232,7 @@ Define ```getProductList()``` function which get all data in db.json
     import { HttpClient } from '@angular/common/http';
     import { Injectable } from '@angular/core';
     import { Observable } from 'rxjs';
-
+   
 
     @Injectable({
     providedIn: 'root'
@@ -87,7 +262,7 @@ import { ProductService } from './product.service';
 })
 export class ProductComponent {
   
-  products: Product[] = [];
+  products: Product[] = []; <
   constructor(private productService: ProductService){}
 
   ngOnInit(): void {
@@ -163,7 +338,7 @@ File: app.component.html
 ```
 
 ### Create Add Product Button
-Start Add Button:
+=== Start Add Button: ===
 File: product.module.ts
 ```
     // Angular Import
@@ -267,4 +442,4 @@ File: product.component.ts
     }
 
 ```
-End Add button 
+=== End Add button ===

@@ -236,11 +236,12 @@
     },
     {
       "id": 19,
-      "title": "Item 19",
+      "title": "Opna Women's Short Sleeve Moisture",
       "price": 7.95,
-      "description": "Description 19",
-      "category": "Category 19",
-      "image": "",
+      "description": "100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash & Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable feminine silhouette and Added Comfort",
+      "category": "women's clothing",
+      "_image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
+      "image": "assets/img/51eg55uWmdL._AC_UX679_.jpg",
       "rating": {
         "rate": 4.5,
         "count": 146
@@ -249,14 +250,15 @@
     },
     {
       "id": 20,
-      "title": "Item 20",
-      "price": 9.85,
-      "description": "Description 20",
-      "category": "Category 20",
-      "image": "",
+      "title": "DANVOUY Womens T Shirt Casual Cotton Short",
+      "price": 12.99,
+      "description": "95% Cotton, 5% Spandex, Features: Casual, Short Sleeve, Letter Print, V-Neck, Fashion Tees, The fabric is soft and has some stretch., Occation: Casdual/Office/Beach/School/Home/Street. Season: Spring, Summer, Autumn, Winter.",
+      "category": "women's clothing",
+      "_image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
+      "image": "assets/img/61pHAEJ4NML._AC_UX679_.jpg",
       "rating": {
-        "rate": 4.7,
-        "count": 147
+        "rate": 3.6,
+        "count": 145
       },
       "date": "2023-11-05T21:07:05.141Z"
     }
