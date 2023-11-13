@@ -162,7 +162,8 @@ File: app.component.html load selector in product.component.ts
     <app-product></app-product>
 ```
 
-<strong>Note</strong>: After this step, the files would be:<br>
+<h4><u>Note: After this step, the files would be:</u></h4>
+
 File: product.module.ts
 ```
     // Angular Import
