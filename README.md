@@ -1,6 +1,6 @@
 <h1 align="center">CRUD PROJECT</h1>
 <p align="center">Create - Read - Update - Delete</p>
-<h2> A. Setup </h2>
+<h2> I. Setup </h2>
 
 <h4> 1. Create project</h4>
 
@@ -48,9 +48,7 @@ Run watch db
     json-server <path/db-filename> --watch
 ```
 
-<h2> B. Start Creating Module and Component</h2>
-
-<h3> 1. Create "product" module</h3>
+<h2> 2. Create "product" module</h2>
 
 ```
     ng g m product
@@ -67,7 +65,7 @@ Ex:
 ```
     http://localhost:3000/products
 ```
-<h3> 2. Create "product" component</h3>
+<h2> 3. Create "product" component</h2>
 
 ```
     ng g c product
@@ -89,7 +87,7 @@ Note: Until now, product folder contain:
     <li>product.module.ts</li>
 </ul>
 
-<h3> 3. Create "product" service inside product folder</h3>
+<h2> 4. Create "product" service inside product folder</h2>
 
 ```
     ng g s product/product
@@ -112,7 +110,7 @@ Note: Until now, product folder contain:
 </ul>
 
 
-<h3> 4. Create "product" interface inside product folder</h3>
+<h2> 5. Create "product" interface inside product folder</h2>
 This interface will store database structor
 
 ```
@@ -136,7 +134,7 @@ Note: Until now, product folder contain:
     <li>product.ts</li>
 </ul>
 
-<h3> 5. Load product component to app component</h3>
+<h2> 6. Load product component to app component</h2>
 
 <h4> 5.1 Export ProductComponent </h4>
 
@@ -223,7 +221,7 @@ File: app.component.html
 <h4 align="center">=====*****===== END SECTION 5 =====*****===== </h4>
 <h4 align="center">=====*****===== END SECTION 5 =====*****===== </h4>
 
-<h3> 6. Handle HTTP protocol</h3>
+<h2> 6. Handle HTTP protocol</h2>
 <ul>
     <li>Create the API</li>
     <li>Call the API and make it responds in the back-end</li>
