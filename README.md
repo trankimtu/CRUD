@@ -138,7 +138,8 @@ Note: Until now, product folder contain:
 
 <h3> 5. Load product component to app component</h3>
 
-### 5.1 Export ProductComponent
+<h4> 5.1 Export ProductComponent </h4>
+
 File: product.module.ts
 ```
     exports: [
