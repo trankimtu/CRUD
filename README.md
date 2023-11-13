@@ -1,6 +1,6 @@
-# CRUD
-Create - Read - Update - Delete
-## Setup
+<h1 align="center"># CRUD PROJECT</h1>
+<p align="center">Create - Read - Update - Delete</p>
+<h2> A. Setup </h2>
 ### Create project
 ```
     ng new CRUD
@@ -42,7 +42,7 @@ If JSON Server is not installed
 ```
     npm install -g json-server
 ```
-
+<h2> B. Start 
 ## 1. Create "product" module
 ```
     ng g m product
