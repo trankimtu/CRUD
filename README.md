@@ -18,7 +18,7 @@ Check package.json
     "primeicons": "^6.0.1",
     "primeng": "^16.7.1",
 ```
-angular.json
+Modify angular.json
 ```
   "styles": [
     "src/styles.css",
@@ -28,10 +28,18 @@ angular.json
     "node_modules/primeicons/primeicons.css"
   ],
 ```
-<h4> 3. SON-Server</h4>
+<h4> 3. JSON-Server</h4>
+Check JSON-Server version
+```
+    json-server -v
+```
+If JSON Server is not installed
+```
+    npm install -g json-server
+```
 
-Create Database JSON file at any location
-Run watch that database
+
+
 Result Ex:
 
     Resources
@@ -42,11 +50,8 @@ Result Ex:
 
 product.service.ts will use this url
 
-If JSON Server is not installed
-```
-    npm install -g json-server
-```
-<h2> B. Start </h2>
+
+<h2> B. Start Creating Module and Component</h2>
 ## 1. Create "product" module
 ```
     ng g m product
