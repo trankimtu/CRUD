@@ -2,11 +2,11 @@
 <p align="center">Create - Read - Update - Delete</p>
 <h2> A. Setup </h2>
 
-### Create project
+<h4> 1. Create project</h4>
 ```
     ng new CRUD
 ```
-### Install PrimeNG, PrimeFlex, PrimeIcons
+<h4> 2. Install PrimeNG, PrimeFlex, PrimeIcons</h4>
 ```
     npm i primeng primeflex primeicons --save
 ```
@@ -26,7 +26,7 @@ angular.json
     "node_modules/primeicons/primeicons.css"
   ],
 ```
-### JSON-Server
+<h4> 3. SON-Server</h4>
 Create Database JSON file at any location
 Run watch that database
 Result Ex:
