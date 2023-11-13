@@ -136,7 +136,7 @@ Note: Until now, product folder contain:
 
 <h2> 6. Load product component to app component</h2>
 
-<h4> 5.1 Export ProductComponent </h4>
+<h4> 6.1 Export ProductComponent </h4>
 
 File: product.module.ts
 ```
@@ -144,7 +144,7 @@ File: product.module.ts
         ProductComponent
     ]
 ```
-<h4> 5.2 Import ProductModule</h4>
+<h4> 6.2 Import ProductModule</h4>
 File: app.module.ts
 
 ```
@@ -153,7 +153,7 @@ File: app.module.ts
         ProductModule
     ]
 ```
-<h4> 5.3 Load product component template to app.component.html</h4>
+<h4> 6.3 Load product component template to app.component.html</h4>
 File: app.component.html load selector in product.component.ts
 
 ```
@@ -221,7 +221,7 @@ File: app.component.html
 <h4 align="center">=====*****===== END SECTION 5 =====*****===== </h4>
 <h4 align="center">=====*****===== END SECTION 5 =====*****===== </h4>
 
-<h2> 6. Handle HTTP protocol</h2>
+<h2> 7. Handle HTTP protocol</h2>
 <ul>
     <li>Create the API</li>
     <li>Call the API and make it responds in the back-end</li>
@@ -234,7 +234,7 @@ Another words:
 JSON-Server is used as back-end database <br>
 
 
-###  6.1 Import HttpClientModule
+###  7.1 Import HttpClientModule
 File: product.module.ts
 ```
     import { HttpClientModule } from '@angular/common/http';
@@ -251,7 +251,7 @@ File: product.module.ts
         HttpClientModule <----
     ],
 ```
-### Apply HTTP service call
+### 7.2 Apply HTTP service call
 File: product.service.ts<br>
 Define ```getProductList()``` function which get all data in db.json
 ```
