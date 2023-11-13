@@ -148,6 +148,7 @@ File: product.module.ts
 ```
 <h4> 5.2 Import ProductModule</h4>
 File: app.module.ts
+
 ```
     import { ProductModule } from './product/product.module';
     import: [
@@ -156,6 +157,7 @@ File: app.module.ts
 ```
 <h4> 5.3 Load product component template to app.component.html</h4>
 File: app.component.html load selector in product.component.ts
+
 ```
     <app-product></app-product>
 ```
