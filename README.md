@@ -3,10 +3,12 @@
 <h2> A. Setup </h2>
 
 <h4> 1. Create project</h4>
+
 ```
     ng new CRUD
 ```
 <h4> 2. Install PrimeNG, PrimeFlex, PrimeIcons</h4>
+
 ```
     npm i primeng primeflex primeicons --save
 ```
@@ -27,6 +29,7 @@ angular.json
   ],
 ```
 <h4> 3. SON-Server</h4>
+
 Create Database JSON file at any location
 Run watch that database
 Result Ex:
@@ -43,7 +46,7 @@ If JSON Server is not installed
 ```
     npm install -g json-server
 ```
-<h2> B. Start 
+<h2> B. Start </h2>
 ## 1. Create "product" module
 ```
     ng g m product
