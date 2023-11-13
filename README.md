@@ -29,11 +29,15 @@ Modify angular.json
   ],
 ```
 <h4> 3. JSON-Server</h4>
+
 Check JSON-Server version
+
 ```
     json-server -v
 ```
+
 If JSON Server is not installed
+
 ```
     npm install -g json-server
 ```
