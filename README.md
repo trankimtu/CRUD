@@ -42,26 +42,30 @@ If JSON Server is not installed
     npm install -g json-server
 ```
 
-
-
-Result Ex:
-
-    Resources
-        http://localhost:3000/products
+Create db.json file (This step will do later)<br>
+Run watch db
 ```
     json-server <path/db-filename> --watch
 ```
 
-product.service.ts will use this url
-
-
 <h2> B. Start Creating Module and Component</h2>
-## 1. Create "product" module
+
+<h3> 1. Create "product" module</h3>
 ```
     ng g m product
 ```
+
 This will create ```product``` folder with ```product.module.ts``` inside<br>
-File db.json can be anywhere, in this project, I place it inside product folder
+File db.json can be anywhere, in this project, I place it inside product folder<br>
+
+```
+    json-server src/app/product/db.json --watch
+```
+Enter resources url to browser
+Ex:
+```
+    http://localhost:3000/products
+```
 ## 2. Create "product" component
 ```
     ng g c product
