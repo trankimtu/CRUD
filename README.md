@@ -241,6 +241,7 @@ File: product.module.ts
 ```
     import { HttpClientModule } from '@angular/common/http';
     imports: [
+        ...
         HttpClientModule
     ],
 ```
