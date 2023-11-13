@@ -2,12 +2,12 @@
 <p align="center">Create - Read - Update - Delete</p>
 <h2> 1. Setup </h2>
 
-<h3> 1.1 Create project</h3>
+<h4> 1.1 Create project</h4>
 
 ```
     ng new CRUD
 ```
-<h3> 1.2 Install PrimeNG, PrimeFlex, PrimeIcons</h3>
+<h4> 1.2 Install PrimeNG, PrimeFlex, PrimeIcons</h4>
 
 ```
     npm i primeng primeflex primeicons --save
@@ -28,7 +28,7 @@ Modify angular.json
     "node_modules/primeicons/primeicons.css"
   ],
 ```
-<h3> 1.3 JSON-Server</h3>
+<h4> 1.3 JSON-Server</h4>
 
 Check JSON-Server version
 
