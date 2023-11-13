@@ -219,7 +219,9 @@ File: app.component.html
     <!-- 5.3 - Load product component to app component (5.1 in product.module.ts, 5.2 in app.module.ts) -->
     <app-product></app-product> 
 ```
-
+<h4 align="center">=====*****===== END SECTION 5 =====*****===== </h4>
+<h4 align="center">=====*****===== END SECTION 5 =====*****===== </h4>
+<h4 align="center">=====*****===== END SECTION 5 =====*****===== </h4>
 
 <h3> 6. Handle HTTP protocol</h3>
 <ul>
