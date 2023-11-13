@@ -162,7 +162,7 @@ File: app.component.html load selector in product.component.ts
     <app-product></app-product>
 ```
 
-<h4><u>Note: After this step, the files would be:</u></h4>
+<h4 align="center">Note: After this step, the files would be:</h4>
 
 File: product.module.ts
 ```
