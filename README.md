@@ -42,7 +42,7 @@ If JSON Server is not installed
     npm install -g json-server
 ```
 
-Create db.json file (This step will do later)<br>
+Create db.json file (This step will do at B.1.)<br>
 Run watch db
 ```
     json-server <path/db-filename> --watch
@@ -51,22 +51,23 @@ Run watch db
 <h2> B. Start Creating Module and Component</h2>
 
 <h3> 1. Create "product" module</h3>
+
 ```
     ng g m product
 ```
 
 This will create ```product``` folder with ```product.module.ts``` inside<br>
-File db.json can be anywhere, in this project, I place it inside product folder<br>
+Create file db.json which can be anywhere, in this project, I place it inside product folder<br>
 
 ```
     json-server src/app/product/db.json --watch
 ```
-Enter resources url to browser
+Enter resources url to browser<br>
 Ex:
 ```
     http://localhost:3000/products
 ```
-## 2. Create "product" component
+<h3> 2. Create "product" component</h3>
 ```
     ng g c product
 ```
@@ -88,7 +89,7 @@ Note: Until now, product folder contain:
     <li>product.module.ts</li>
 </ul>
 
-## 3. Create "product" service inside product folder
+<h3> 3. Create "product" service inside product folder</h3>
 ```
     ng g s product/product
 ```
@@ -110,7 +111,7 @@ Note: Until now, product folder contain:
 </ul>
 
 
-## 4. Create "product" interface inside product folder
+<h3> 4. Create "product" interface inside product folder</h3>
 This interface will store database structor
 ```
     ng g i product/product
@@ -133,7 +134,7 @@ After this command the list files below is generated inside product folder.
     <li>product.ts</li>
 </ul>
 
-## 5. Load product component to app component
+<h3> 5. Load product component to app component</h3>
 ### 5.1 Export ProductComponent
 File: product.module.ts
 ```
@@ -212,7 +213,7 @@ File: app.component.html
 ```
 
 
-## 6. Handle HTTP protocol
+<h3> 6. Handle HTTP protocol</h3>
 <ul>
     <li>Create the API</li>
     <li>Call the API and make it responds in the back-end</li>
