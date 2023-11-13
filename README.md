@@ -196,7 +196,7 @@ File: app.module.ts
 
     import { AppComponent } from './app.component';
 
-    //5.2 - Load product component to app component (5.1 in product.modules.ts)
+    //5.2 - Load product component to app component (5.1 in product.modules.ts, 5.3 in app.component.html)
     import { ProductModule } from './product/product.module';
 
     @NgModule({
@@ -216,7 +216,8 @@ File: app.module.ts
 
 File: app.component.html
 ```
-    <app-product></app-product> <!-- 5.3 - Load product component to app component (5.1 in product.module.ts, 5.2 in app.module.ts) -->
+    <!-- 5.3 - Load product component to app component (5.1 in product.module.ts, 5.2 in app.module.ts) -->
+    <app-product></app-product> 
 ```
 
 
