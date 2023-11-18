@@ -88,7 +88,7 @@ Note: Until now, product folder contain:
 </ul>
 
 <h2> 4. Create "product" service inside product folder</h2>
-
+This service will handle http request
 ```
     ng g s product/product
 ```
@@ -160,7 +160,7 @@ File: app.component.html load selector in product.component.ts
     <app-product></app-product>
 ```
 
-<h4 align="center">=====*****===== Note: After this step, the files would be: =====*****===== </h4>
+<h4 align="center">=====*****===== Sumary Section 6: After this step, the files would be: =====*****===== </h4>
 
 File: product.module.ts
 ```
@@ -214,28 +214,41 @@ File: app.module.ts
 
 File: app.component.html
 ```
-    <!-- 5.3 - Load product component to app component (5.1 in product.module.ts, 5.2 in app.module.ts) -->
+    <!-- 6.3 - Load product component to app component (6.1 in product.module.ts, 6.2 in app.module.ts) -->
     <app-product></app-product> 
 ```
-<h4 align="center">=====*****===== END SECTION 5 =====*****===== </h4>
-<h4 align="center">=====*****===== END SECTION 5 =====*****===== </h4>
-<h4 align="center">=====*****===== END SECTION 5 =====*****===== </h4>
+<h4 align="center">=====*****===== END SECTION 6 =====*****===== </h4>
+<h4 align="center">=====*****===== END SECTION 6 =====*****===== </h4>
+<h4 align="center">=====*****===== END SECTION 6 =====*****===== </h4>
 
-<h2> 7. Handle HTTP protocol</h2>
-<ul>
-    <li>Create the API</li>
-    <li>Call the API and make it responds in the back-end</li>
-</ul>
-Another words:
-<ul>
-    <li>Connect to database</li>
-    <li>Query data and store in a parameter to use later</li>
-</ul>
-JSON-Server is used as back-end database <br>
+<h2> 7. HTTP Request</h2>
 
 
-###  7.1 Import HttpClientModule
+<h4> 7.1 Database Interface - db.json </h4>
+File: product.ts (Interface of database)
+
+```
+    export interface Product {
+        id: number;
+        title: string;
+        price: number;
+        description: string;
+        category: string;
+        image: string;
+        rating: RatingProps;
+        date: Date;
+    }
+
+    interface RatingProps {
+        rate: number;
+        count: number;
+    }
+```
+<h4> 7.2 Import Http client module </h4>
+
+Import the ```HttpClientModule``` in a module's TypeScript file<br>
 File: product.module.ts
+
 ```
     import { HttpClientModule } from '@angular/common/http';
     imports: [
@@ -243,69 +256,186 @@ File: product.module.ts
         HttpClientModule
     ],
 ```
-File: product.module.ts
+
+<h4> 7.3 Injecting the HTTP client service into the service and declare service method</h4>
+
+File: product.service.ts <br>
+Import Dependencies:
+
 ```
-    import { HttpClientModule } from '@angular/common/http';
-    imports: [
-        CommonModule,
-        HttpClientModule <----
+    import { HttpClient } from '@angular/common/http';
+    import { Injectable } from '@angular/core';
+```
+
+Inject Dependencies:<br>
+Use the @Injectable decorator to make the service injectable and inject any required dependencies in the service's constructor.<br>
+
+Dependency injection. HttpClient service is injected into the 'ProductServiace' class. This allows to use the 'http' instance to make HTTP request within the service<br>
+
+```
+    @Injectable({
+        providedIn: 'root',
+    })
+
+    export class ProductService {
+        constructor(private http: HttpClient) { }
+    }
+
+```
+
+Declare Service method
+
+```
+    getProducts(): Observable<Product[]> {
+        return this.http.get<Product[]>('http://localhost:3000/products')
+    }
+```
+
+Service method that makes an HTTP GET request to retrieve a list of products from a specified API endpoint.<br>
+This method return an observable of type 'Observable<Product[]>', indicating that it returns a stream of data over time, and the data is expected to be an array of 'Product' objects<br>
+getProducts(): This is the method name, indicating that it's responsible for retrieving a list of products.<br>
+Observable<Product[]>: It signifies that the method returns an observable stream of data, where the data is expected to be an array of Product objects.<br>
+this.http.get<Product[]>('http://localhost:3000/products'): This is the actual HTTP GET request using Angular's HttpClient. It fetches data from the specified URL ('http://localhost:3000/products') and expects the response data to be an array of Product objects.
+
+<h4> 7.4 Invoking/Calling a Service Method in a Component</h4>
+File: product.component.ts<br>
+Import the Service in the Component:<br>
+
+```
+    import { ProductService } from './product.service';
+```
+
+Inject the Service in the Component's Constructor:<br>
+
+```
+  constructor(private productService: ProductService){}
+```
+
+Call the Service Method:<br>
+
+```
+    getProductList() {
+        this.productService.getProducts().subscribe(
+        response => {
+            this.products = response;
+        }
+        )
+    }
+```
+
+<h4 align="center">=====*****===== Sumary Section 7: After this step, the files would be: =====*****===== </h4>
+7.1 File: product.js - Interface
+
+```
+    export interface Product {
+        id: number;
+        title: string;
+        price: number;
+        description: string;
+        category: string;
+        image: string;
+        rating: RatingProps;
+        date: Date;
+    }
+
+    interface RatingProps {
+        rate: number;
+        count: number;
+    }
+```
+
+7.2 File: product.module.ts - Import Http client module
+
+```
+    // Angular Import
+    import { NgModule } from '@angular/core'; // 2-- Generate when creating product module
+    import { CommonModule } from '@angular/common'; // 2-- Generate when creating product module
+    import { HttpClientModule } from '@angular/common/http'; // 7.2 Import Http client module
+
+    // Component Import
+    import { ProductComponent } from './product.component'; // 3-- Generate at creating product component
+
+    @NgModule({
+    declarations: [
+        ProductComponent // 3-- Generate at creating product component
     ],
+    imports: [
+        CommonModule, // 2-- Generate when creating product module
+        HttpClientModule, // 7.2 Import Http client module
+    ],
+    exports: [ // 6.1-- Load product component to app component (6.2 in app.module.ts, 6.3 in app.component.html)
+        ProductComponent
+    ]
+    })
+    export class ProductModule { }
+
 ```
-### 7.2 Apply HTTP service call
-File: product.service.ts<br>
-Define ```getProductList()``` function which get all data in db.json
+
+7.3 File: product.service.ts - 7.3 Injecting the HTTP client service into the service and declare service method
+
 ```
     import { Product } from './product';
     import { HttpClient } from '@angular/common/http';
     import { Injectable } from '@angular/core';
     import { Observable } from 'rxjs';
-   
+
 
     @Injectable({
-    providedIn: 'root'
+        providedIn: 'root'
     })
     export class ProductService {
 
-    baseUrl = 'http://localhost:3000'
-    constructor(private http: HttpClient) { }
+        baseUrl = 'http://localhost:3000'
+        constructor(private http: HttpClient) { }
 
-    getProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>('http://localhost:3000/products')
-  }
-}
-```
-
-File: product.component.ts <br>
-Call ```getProucList()``` method and store data to ```products``` 
-```
-import { Component } from '@angular/core';
-import { Product } from './product';
-import { ProductService } from './product.service';
-
-@Component({
-  selector: 'app-product',
-  templateUrl: './product.component.html',
-  styleUrls: ['./product.component.css']
-})
-export class ProductComponent {
-  
-  products: Product[] = []; <
-  constructor(private productService: ProductService){}
-
-  ngOnInit(): void {
-    this.getProductList();
-  }
-
-  getProductList() {
-    this.productService.getProducts().subscribe(
-      response => {
-        this.products = response;
-      }
-    )
-  }
-}
+        getProducts(): Observable<Product[]> {
+            return this.http.get<Product[]>('http://localhost:3000/products')
+        }
+    }
 
 ```
+
+File: product.component.ts - 7.4 Invoking/Calling a Service Method in a Component
+
+```
+    import { Component } from '@angular/core';
+    import { Product } from './product';
+    import { ProductService } from './product.service';
+
+
+    @Component({
+        selector: 'app-product',
+        templateUrl: './product.component.html',
+        styleUrls: ['./product.component.css']
+    })
+    export class ProductComponent {
+    
+        products: Product[] = [];
+        displayAddModal = false;
+        
+        constructor(private productService: ProductService){}
+
+        ngOnInit(): void {
+            this.getProductList();
+        }
+
+        getProductList() {
+            this.productService.getProducts().subscribe(
+                response => {
+                    this.products = response; // Data is fetched and store in response then set it to products parameter for display
+                }
+            )
+        }
+    }
+```
+
+<h4 align="center">=====*****===== END SECTION 7 =====*****===== </h4>
+<h4 align="center">=====*****===== END SECTION 7 =====*****===== </h4>
+<h4 align="center">=====*****===== END SECTION 7 =====*****===== </h4>
+
+
+
+
 
 ### Create table and display the data
 File: product.module.ts
