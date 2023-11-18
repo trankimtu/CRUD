@@ -371,7 +371,7 @@ Call the Service Method:<br>
 
 ```
 
-7.3 File: product.service.ts - 7.3 Injecting the HTTP client service into the service and declare service method
+7.3 File: product.service.ts - Injecting the HTTP client service into the service and declare service method
 
 ```
     import { Product } from './product';
@@ -395,7 +395,7 @@ Call the Service Method:<br>
 
 ```
 
-File: product.component.ts - 7.4 Invoking/Calling a Service Method in a Component
+7.4 File: product.component.ts - Invoking/Calling a Service Method in a Component
 
 ```
     import { Component } from '@angular/core';
