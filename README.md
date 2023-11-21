@@ -316,9 +316,9 @@ Call the Service Method:<br>
 ```
     getProductList() {
         this.productService.getProducts().subscribe(
-        response => {
-            this.products = response;
-        }
+          response => {
+              this.products = response;
+          }
         )
     }
 ```
